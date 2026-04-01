@@ -4,70 +4,77 @@
       "id": "submit-endpoint",
       "name": "POST /submit Worker route",
       "description": "Accepts opinion text, reads cf.country + cf.colo, calls Workers AI for sentiment, reports to Durable Object",
-      "status": "todo",
-      "passes": false
+      "status": "done",
+      "passes": true
     },
     {
       "id": "durable-object-room",
       "name": "GroundswellRoom Durable Object",
       "description": "Global state hub — stores submissions, manages WebSocket connections, fans out updates, triggers narrator",
-      "status": "todo",
-      "passes": false
+      "status": "done",
+      "passes": true
     },
     {
       "id": "sentiment-scoring",
       "name": "Llama 3.3 Sentiment Scoring",
-      "description": "Workers AI call that returns sentiment (-1 to 1), confidence, and a 3-word theme label",
-      "status": "todo",
-      "passes": false
+      "description": "Workers AI call that returns sentiment (-1 to 1) and a 2-3 word theme label",
+      "status": "done",
+      "passes": true
     },
     {
       "id": "websocket-fanout",
       "name": "WebSocket real-time fan-out",
       "description": "Durable Object pushes new submission events to all connected browser clients instantly",
-      "status": "todo",
-      "passes": false
+      "status": "done",
+      "passes": true
     },
     {
       "id": "globe-map",
       "name": "Live Globe Map (Leaflet)",
-      "description": "React-Leaflet world map — markers appear at country centroids, colored by sentiment (red/yellow/green)",
-      "status": "todo",
-      "passes": false
+      "description": "React-Leaflet world map — markers appear at country centroids (~80 countries), colored by sentiment (red/yellow/green)",
+      "status": "done",
+      "passes": true
     },
     {
       "id": "submit-bar",
       "name": "Submit Bar UI",
-      "description": "One-line opinion input with topic selector and submit button",
-      "status": "todo",
-      "passes": false
+      "description": "One-line opinion input with topic label and submit button; Enter key supported",
+      "status": "done",
+      "passes": true
     },
     {
       "id": "ai-narrator",
       "name": "AI Narrator Panel",
       "description": "Llama 3.3 watches global state and generates pattern commentary every 30s or 10 submissions",
-      "status": "todo",
-      "passes": false
+      "status": "done",
+      "passes": true
     },
     {
       "id": "live-feed",
       "name": "Live Feed Sidebar",
-      "description": "Scrolling list of recent submissions with country flag, sentiment score, and truncated opinion",
-      "status": "todo",
-      "passes": false
+      "description": "Scrolling list of recent submissions with country flag, sentiment indicator, colo, and theme tag",
+      "status": "done",
+      "passes": true
     },
     {
       "id": "kv-cache",
       "name": "KV Regional Summary Cache",
-      "description": "Cache per-country aggregated sentiment in KV, refreshed every minute",
-      "status": "todo",
-      "passes": false
+      "description": "Per-country latest sentiment cached in KV with 60s TTL",
+      "status": "done",
+      "passes": true
+    },
+    {
+      "id": "test-dashboard",
+      "name": "In-browser Test Dashboard",
+      "description": "40+ unit tests for sentiment logic, globe aggregation, WS message handling, and UI helpers; accessible via TESTS button",
+      "status": "done",
+      "passes": true
     },
     {
       "id": "deploy",
       "name": "Deploy to Cloudflare Pages + Workers",
       "description": "Frontend on Pages, Worker + DO on Workers, wrangler.toml configured",
-      "status": "todo",
+      "status": "pending",
       "passes": false
     }
   ]

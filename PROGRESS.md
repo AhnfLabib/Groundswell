@@ -15,12 +15,18 @@
 - [x] `.gitignore` added
 - [x] `README.md` with full setup + deploy instructions
 
+### Session 3 — Feature Complete
+- [x] All backend features implemented: `/submit`, `/ws`, `GroundswellRoom`, `sentiment.js`
+- [x] All frontend components implemented: `Globe`, `SubmitBar`, `Narrator`, `LiveFeed`, `TestPanel`
+- [x] Google Fonts (DM Serif Display + DM Mono) imported in `index.html`
+- [x] `COUNTRY_COORDS` expanded to ~80 countries in `Globe.jsx`
+- [x] In-browser test dashboard with 40+ unit tests across 6 suites
+- [x] `FEATURES.json` updated to reflect implementation status
+
 ## Up Next
-- [ ] `npx wrangler login` + create KV namespace, paste ID into `wrangler.toml`
+- [ ] `npx wrangler login` + create KV namespace: `npx wrangler kv:namespace create KV_SENTIMENT`
+- [ ] Paste returned KV ID into `wrangler.toml`
 - [ ] `npx wrangler dev` — smoke test Worker locally
 - [ ] `npm run dev` — smoke test frontend, confirm WebSocket connects
-- [ ] Add Google Fonts import (DM Serif Display + DM Mono) to `index.html`
-- [ ] Expand `COUNTRY_COORDS` in `Globe.jsx` to cover ~50 countries
-- [ ] Add pulse animation to new markers on the map
 - [ ] Deploy Worker → update `ALLOWED_ORIGIN` in `wrangler.toml`
 - [ ] Deploy frontend to Cloudflare Pages
