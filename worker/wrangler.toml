@@ -1,0 +1,25 @@
+name = "groundswell-worker"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+[ai]
+binding = "AI"
+
+[[durable_objects.bindings]]
+name = "GROUNDSWELL_ROOM"
+class_name = "GroundswellRoom"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["GroundswellRoom"]
+
+[[kv_namespaces]]
+binding = "KV_SENTIMENT"
+id = "REPLACE_WITH_YOUR_KV_ID"
+
+[vars]
+TOPIC = "the future of AI"
+
+# CORS — update with your Pages URL after deploy
+ALLOWED_ORIGIN = "http://localhost:5173"

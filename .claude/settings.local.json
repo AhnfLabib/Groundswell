@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -v \"^\\\\s*$\")",
+      "Bash(npm install:*)",
+      "Bash(npx wrangler:*)",
+      "Bash(echo \"Worker PID: $!\")",
+      "Bash(kill 81117 81160 81241 81320)",
+      "Bash(npm run:*)",
+      "Bash(echo \"Frontend PID: $!\")",
+      "Bash(kill 81414 81529)",
+      "Bash(npm test:*)",
+      "Bash(xargs kill:*)",
+      "Bash(echo \"Worker PID: $!\" sleep 7)",
+      "Bash(curl -s http://localhost:8787/submit -X POST -H \"Content-Type: application/json\" -d '{\"text\":\"hello world\",\"topic\":\"test\"}')",
+      "Bash(echo \"Frontend PID: $!\" sleep 5)",
+      "Read(//tmp/**)"
+    ]
+  }
+}

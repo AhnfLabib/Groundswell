@@ -1,0 +1,74 @@
+{
+  "features": [
+    {
+      "id": "submit-endpoint",
+      "name": "POST /submit Worker route",
+      "description": "Accepts opinion text, reads cf.country + cf.colo, calls Workers AI for sentiment, reports to Durable Object",
+      "status": "todo",
+      "passes": false
+    },
+    {
+      "id": "durable-object-room",
+      "name": "GroundswellRoom Durable Object",
+      "description": "Global state hub — stores submissions, manages WebSocket connections, fans out updates, triggers narrator",
+      "status": "todo",
+      "passes": false
+    },
+    {
+      "id": "sentiment-scoring",
+      "name": "Llama 3.3 Sentiment Scoring",
+      "description": "Workers AI call that returns sentiment (-1 to 1), confidence, and a 3-word theme label",
+      "status": "todo",
+      "passes": false
+    },
+    {
+      "id": "websocket-fanout",
+      "name": "WebSocket real-time fan-out",
+      "description": "Durable Object pushes new submission events to all connected browser clients instantly",
+      "status": "todo",
+      "passes": false
+    },
+    {
+      "id": "globe-map",
+      "name": "Live Globe Map (Leaflet)",
+      "description": "React-Leaflet world map — markers appear at country centroids, colored by sentiment (red/yellow/green)",
+      "status": "todo",
+      "passes": false
+    },
+    {
+      "id": "submit-bar",
+      "name": "Submit Bar UI",
+      "description": "One-line opinion input with topic selector and submit button",
+      "status": "todo",
+      "passes": false
+    },
+    {
+      "id": "ai-narrator",
+      "name": "AI Narrator Panel",
+      "description": "Llama 3.3 watches global state and generates pattern commentary every 30s or 10 submissions",
+      "status": "todo",
+      "passes": false
+    },
+    {
+      "id": "live-feed",
+      "name": "Live Feed Sidebar",
+      "description": "Scrolling list of recent submissions with country flag, sentiment score, and truncated opinion",
+      "status": "todo",
+      "passes": false
+    },
+    {
+      "id": "kv-cache",
+      "name": "KV Regional Summary Cache",
+      "description": "Cache per-country aggregated sentiment in KV, refreshed every minute",
+      "status": "todo",
+      "passes": false
+    },
+    {
+      "id": "deploy",
+      "name": "Deploy to Cloudflare Pages + Workers",
+      "description": "Frontend on Pages, Worker + DO on Workers, wrangler.toml configured",
+      "status": "todo",
+      "passes": false
+    }
+  ]
+}
